@@ -1,5 +1,7 @@
 {
   "name": "photo-blog",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
