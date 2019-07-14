@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Blogs
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-content>
+        <ion-card (click)="expandItem(item)" *ngFor="let item of items">
+          <ion-card-header>
+            <h3 [innerHtml]="item.title"></h3>
+          </ion-card-header>
+
+          <ion-card-content>
+            <app-blog-post-accordion [expanded]="item.expanded">
+              <p
+              [innerHTML]="item.info">
+              </p>
+            </app-blog-post-accordion>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+</ion-content>
